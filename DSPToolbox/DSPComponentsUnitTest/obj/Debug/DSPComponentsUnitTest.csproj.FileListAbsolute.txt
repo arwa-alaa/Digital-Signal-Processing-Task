@@ -1,0 +1,22 @@
+D:\Career\Teaching\2017\General\Second Term\DSP\DSP Toolbox\DSP_Toolbox\DSPComponentsUnitTest\bin\Debug\DSPComponentsUnitTest.dll
+D:\Career\Teaching\2017\General\Second Term\DSP\DSP Toolbox\DSP_Toolbox\DSPComponentsUnitTest\bin\Debug\DSPComponentsUnitTest.pdb
+D:\Career\Teaching\2017\General\Second Term\DSP\DSP Toolbox\DSP_Toolbox\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.csprojResolveAssemblyReference.cache
+D:\Career\Teaching\2017\General\Second Term\DSP\DSP Toolbox\DSP_Toolbox\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.dll
+D:\Career\Teaching\2017\General\Second Term\DSP\DSP Toolbox\DSP_Toolbox\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.pdb
+D:\Career\Teaching\2017\General\Second Term\DSP\DSP Toolbox\DSP_Toolbox\DSPComponentsUnitTest\bin\Debug\DSPComponents.dll
+D:\Career\Teaching\2017\General\Second Term\DSP\DSP Toolbox\DSP_Toolbox\DSPComponentsUnitTest\bin\Debug\DSPComponents.pdb
+G:\dsp.toolbox.git\DSPToolbox\DSPComponentsUnitTest\bin\Debug\DSPComponentsUnitTest.dll
+G:\dsp.toolbox.git\DSPToolbox\DSPComponentsUnitTest\bin\Debug\DSPComponentsUnitTest.pdb
+G:\dsp.toolbox.git\DSPToolbox\DSPComponentsUnitTest\bin\Debug\DSPComponents.dll
+G:\dsp.toolbox.git\DSPToolbox\DSPComponentsUnitTest\bin\Debug\DSPComponents.pdb
+G:\dsp.toolbox.git\DSPToolbox\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.csprojResolveAssemblyReference.cache
+G:\dsp.toolbox.git\DSPToolbox\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.dll
+G:\dsp.toolbox.git\DSPToolbox\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.pdb
+G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.csprojResolveAssemblyReference.cache
+G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.dll
+G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.pdb
+G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPComponentsUnitTest\bin\Debug\TestingSignals\SignalFileConstruction
+G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPComponentsUnitTest\bin\Debug\DSPComponentsUnitTest.dll
+G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPComponentsUnitTest\bin\Debug\DSPComponentsUnitTest.pdb
+G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPComponentsUnitTest\bin\Debug\DSPComponents.dll
+G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPComponentsUnitTest\bin\Debug\DSPComponents.pdb
