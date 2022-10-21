@@ -1,0 +1,6 @@
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPComponents\bin\Debug\DSPComponents.dll
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPComponents\bin\Debug\DSPComponents.pdb
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPComponents\obj\Debug\DSPAlgorithms.csproj.AssemblyReference.cache
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPComponents\obj\Debug\DSPAlgorithms.csproj.CoreCompileInputs.cache
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPComponents\obj\Debug\DSPComponents.dll
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPComponents\obj\Debug\DSPComponents.pdb

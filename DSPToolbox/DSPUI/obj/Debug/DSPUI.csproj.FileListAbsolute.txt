@@ -61,3 +61,32 @@ G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPTo
 G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPUI\obj\Debug\DSPUI.DSPToolbox.resources
 G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPUI\obj\Debug\DSPUI.Properties.Resources.resources
 G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.GenerateResource.Cache
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\Media\Warning.png
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\DSPUI.exe.config
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\DSPUI.exe
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\DSPUI.pdb
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\DSPComponents.dll
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\OxyPlot.dll
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\OxyPlot.WindowsForms.dll
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\DSPComponents.pdb
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\OxyPlot.pdb
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\OxyPlot.xml
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\OxyPlot.WindowsForms.pdb
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\bin\Debug\OxyPlot.WindowsForms.xml
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.AssemblyReference.cache
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.DiscreteFourierTransform.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FastFourierTransform.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FileInputSignal.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FIR.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MovingAverage.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MultiplySignalByConstant.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Normalizer.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.QuantizationAndEncoding.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Shifter.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.DSPToolbox.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.Properties.Resources.resources
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.GenerateResource.cache
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.CoreCompileInputs.cache
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.CopyComplete
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.exe
+E:\7th Term\Digital Single Processing\Task\Digital-Single-Processing-Task\DSPToolbox\DSPUI\obj\Debug\DSPUI.pdb
