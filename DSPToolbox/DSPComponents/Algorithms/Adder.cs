@@ -14,7 +14,6 @@ namespace DSPAlgorithms.Algorithms
 
         public override void Run()
         {
-            //throw new NotImplementedException();
 
             List<float> ans = new List<float>(); ;
 
