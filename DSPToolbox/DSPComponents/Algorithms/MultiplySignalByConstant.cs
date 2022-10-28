@@ -15,7 +15,15 @@ namespace DSPAlgorithms.Algorithms
 
         public override void Run()
         {
-            throw new NotImplementedException();
+
+            List<float> ans = new List<float>(); ;
+
+            for (int i = 0; i < InputSignal.Samples.Count; i++)
+            {
+                ans.Add(InputSignal.Samples[i] * InputConstant );
+            }
+
+            OutputMultipliedSignal = new Signal(ans, false);
         }
     }
 }
