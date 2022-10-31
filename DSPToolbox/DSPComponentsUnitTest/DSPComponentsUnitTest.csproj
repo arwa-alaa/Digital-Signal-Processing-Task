@@ -53,6 +53,7 @@
     <Compile Include="AdderTestCases.cs" />
     <Compile Include="ConvolutionTestCases.cs" />
     <Compile Include="CorrelationTestCases.cs" />
+    <Compile Include="DC_ComponentTestCases.cs" />
     <Compile Include="DFTTestCases.cs" />
     <Compile Include="FastFourierTransformTestCases.cs" />
     <Compile Include="FIRTestCases.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuantizationAndEncodingTestCases.cs" />
     <Compile Include="ShiftingAndFolding.cs" />
+    <Compile Include="SinCosTestCases.cs" />
     <Compile Include="StudentTestCases.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -107,6 +109,7 @@
     <None Include="TestingSignals\BSFCoefficients.ds">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestingSignals\Cos.ds" />
     <None Include="TestingSignals\CrossCorrelationNonNormalized_TestCase.ds">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -203,6 +206,7 @@
     <None Include="TestingSignals\SignalFileConstruction">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestingSignals\Sin.ds" />
     <None Include="TestingSignals\Subtractor_TestCase1.ds">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
