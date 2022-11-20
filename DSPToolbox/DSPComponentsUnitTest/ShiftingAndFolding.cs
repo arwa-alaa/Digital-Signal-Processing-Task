@@ -38,6 +38,7 @@ namespace DSPComponentsUnitTest
             expectedOutputSignal = UnitTestUtitlities.LoadSignal("TestingSignals/Output_Shift_Plus500.ds");
             s.Run();
             actualOutputSignal = s.OutputShiftedSignal;
+
         }
 
         [TestMethod]
@@ -48,7 +49,8 @@ namespace DSPComponentsUnitTest
             expectedOutputSignal = UnitTestUtitlities.LoadSignal("TestingSignals/Output_Shift_Minus500.ds");
             s.Run();
             actualOutputSignal = s.OutputShiftedSignal;
-           
+
+
         }
        
         [TestMethod]
@@ -58,6 +60,7 @@ namespace DSPComponentsUnitTest
             expectedOutputSignal = UnitTestUtitlities.LoadSignal("TestingSignals/Output_Fold.ds");
             f.Run();
             actualOutputSignal = f.OutputFoldedSignal;
+
         }
 
         [TestMethod]
@@ -70,6 +73,8 @@ namespace DSPComponentsUnitTest
             s.InputSignal = f.OutputFoldedSignal;
             s.Run();
             actualOutputSignal = s.OutputShiftedSignal;
+
+
         }
 
         [TestMethod]
@@ -82,6 +87,7 @@ namespace DSPComponentsUnitTest
             s.InputSignal = f.OutputFoldedSignal;
             s.Run();
             actualOutputSignal = s.OutputShiftedSignal;
+
         }
 
         [TestMethod]
@@ -96,15 +102,6 @@ namespace DSPComponentsUnitTest
             f.Run();
             actualOutputSignal = f.OutputFoldedSignal;
 
-            Console.WriteLine(" expect Shift  SamplesIndices ");
-
-            foreach (var i in expectedOutputSignal.SamplesIndices)
-                Console.WriteLine(" expect Shift SamplesIndices " + i);
-
-            Console.WriteLine(" expect Shift  Samples ");
-
-            foreach (var i in expectedOutputSignal.Samples)
-                Console.WriteLine(" expect Shift Samples " + i);
 
         }
 
@@ -119,7 +116,8 @@ namespace DSPComponentsUnitTest
             f.InputSignal = s.OutputShiftedSignal;
             f.Run();
             actualOutputSignal = f.OutputFoldedSignal;
-           
+
+
         }
         
         [TestMethod]
@@ -150,6 +148,7 @@ namespace DSPComponentsUnitTest
 
             actualOutputSignal = s2.OutputShiftedSignal;
             expectedOutputSignal = new Signal(new List<float>(){1, 2, 3, 8}, new List<int>(){-5, -4, -3, -2}, false);
+
         }
     }
 }
