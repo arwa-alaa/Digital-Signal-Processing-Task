@@ -16,7 +16,22 @@ namespace DSPAlgorithms.Algorithms
 
         public override void Run()
         {
-            throw new NotImplementedException();
+            DirectCorrelation dc = new DirectCorrelation();
+            dc.InputSignal1 = new Signal(InputSignal1.Samples, false);
+            dc.InputSignal2 = new Signal(InputSignal2.Samples, false);
+            dc.Run();
+
+            float mx = -1000.00f;
+            int indx_mx = 0;
+            for(int i=0; i< dc.OutputNormalizedCorrelation.Count;i++)
+            {
+                if (dc.OutputNormalizedCorrelation[i] > mx)
+                {
+                    mx = dc.OutputNormalizedCorrelation[i];
+                    indx_mx = i;
+                }
+            }
+            OutputTimeDelay = indx_mx * InputSamplingPeriod;
         }
     }
 }
