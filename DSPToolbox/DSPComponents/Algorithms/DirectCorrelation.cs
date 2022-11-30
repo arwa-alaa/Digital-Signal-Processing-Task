@@ -23,13 +23,14 @@ namespace DSPAlgorithms.Algorithms
             OutputNonNormalizedCorrelation= new List<float>();
             if (InputSignal2 == null)
             {
-                InputSignal2 = InputSignal1;
+                InputSignal2 = new Signal(new List<float>(InputSignal1.Samples),InputSignal1.Periodic);
+
                
             }
             for (int i=0;i< n;i++)
             {
-               /// Console.WriteLine(InputSignal2.Samples.Count);
-                /*if (InputSignal2.Periodic && i != 0) // shift left
+               
+                if (InputSignal2.Periodic && i != 0) // shift left
                 {
                     float temp = InputSignal2.Samples[0];
                     
@@ -44,8 +45,9 @@ namespace DSPAlgorithms.Algorithms
                     InputSignal2.Samples.RemoveAt(0);
                     InputSignal2.Samples.Add(0);
                     //Console.WriteLine(InputSignal2.Samples.Count);
-                }*/
+                }
                 correlation_sum= 0;
+               
                 for (int j=0;j<n;j++)
                 {
                     if(i==0)
@@ -53,23 +55,9 @@ namespace DSPAlgorithms.Algorithms
                         sum1_sqr += Math.Pow(InputSignal1.Samples[j],2);
                         sum2_sqr += Math.Pow(InputSignal2.Samples[j],2);
                     }
-                    int iplusj = i + j;
-                    if (InputSignal2.Periodic) // shift left
-                    {
-                        if (iplusj >= n)
-                            iplusj %=n;
-                      
-                         correlation_sum += InputSignal1.Samples[j] * InputSignal2.Samples[iplusj];
-                    }
-                    else
-                    {
-                        if (iplusj >= n)
-                            correlation_sum += 0;
-                        else
-                           correlation_sum += InputSignal1.Samples[j] * InputSignal2.Samples[iplusj];
-                    }
-                       
-                    //Console.WriteLine(InputSignal2.Samples[j]);
+               
+                    correlation_sum += InputSignal1.Samples[j] * InputSignal2.Samples[j];
+                    
                 }
                 if(i==0)
                 {
