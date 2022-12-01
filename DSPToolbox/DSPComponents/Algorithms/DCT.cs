@@ -18,15 +18,15 @@ namespace DSPAlgorithms.Algorithms
 
             int sz = InputSignal.Samples.Count;
 
-            for(int k =0 ; k<sz ; k++)
+            for (int k = 0; k < sz; k++)
             {
                 float sum = 0;
-                for(int n=0 ; n < sz; n++)
+                for (int n = 0; n < sz; n++)
                 {
-                    float ceta = ((float)Math.PI / (4 * sz )) * (2 * n - 1) * (2 * k - 1);
+                    float ceta = ((float)Math.PI / (4 * sz)) * (2 * n - 1) * (2 * k - 1);
                     sum += (float)(InputSignal.Samples[n] * Math.Cos(ceta));
                 }
-               OutputSignal.Samples.Add(sum*(float)Math.Sqrt(2.0f/sz)); 
+                OutputSignal.Samples.Add(sum * (float)Math.Sqrt(2.0f / sz));
             }
         }
     }
