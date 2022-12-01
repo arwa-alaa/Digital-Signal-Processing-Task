@@ -16,7 +16,7 @@ namespace DSPAlgorithms.Algorithms
         public override void Run()
         {
             
-            int k = InputFreqDomainSignal.Frequencies.Count;
+            int k = InputFreqDomainSignal.FrequenciesAmplitudes.Count;
             Complex[] components = new Complex[k];
 
             for (int i = 0; i < k; i++)

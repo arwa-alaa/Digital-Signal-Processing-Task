@@ -104,7 +104,7 @@ namespace DSPComponentsUnitTest
             {
                 if ((!float.IsNaN(l1[i]) && float.IsNaN(l2[i])) || (float.IsNaN(l1[i]) && !float.IsNaN(l2[i])))
                     return false;
-                else if (Math.Abs(l1[i] - l2[i]) > 0.0001)
+                else if (Math.Abs(l1[i] - l2[i]) > 0.01)   //0.0001
                     return false;
             }
 
