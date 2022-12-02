@@ -48,11 +48,12 @@ namespace DSPAlgorithms.Algorithms
                 float A1 = x1.FrequenciesAmplitudes[i];
                 float PhaseShift1 = x1.FrequenciesPhaseShifts[i];
                 components1[i] = new Complex(A1 * Math.Cos(PhaseShift1), A1 * Math.Sin(PhaseShift1));
-              //  Console.WriteLine(i);
+                //  Console.WriteLine(i);
+                components1[i] = Complex.Conjugate(components1[i]);
                 float A2 = x2.FrequenciesAmplitudes[i];
                 float PhaseShift2 = x2.FrequenciesPhaseShifts[i];
                 components2[i] = new Complex(A2 * Math.Cos(PhaseShift2), (A2 * Math.Sin(PhaseShift2)));
-                components2[i] = Complex.Conjugate(components2[i]);
+                
 
             }
             output1.FrequenciesAmplitudes = new List<float>();
