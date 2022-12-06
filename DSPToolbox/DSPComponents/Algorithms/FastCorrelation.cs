@@ -40,36 +40,37 @@ namespace DSPAlgorithms.Algorithms
             Signal x2 = dft.OutputFreqDomainSignal;
 
             int n = InputSignal1.Samples.Count;
-            Complex[] components1 = new Complex[n];
-            Complex[] components2 = new Complex[n];
+      
+            output1.FrequenciesAmplitudes = new List<float>();
+            output1.FrequenciesPhaseShifts = new List<float>();
 
             for (int i = 0; i < n; i++)
             {
+                //to calculate normalize equation
+                sum1_sqr += (InputSignal1.Samples[i] * InputSignal1.Samples[i]);
+                sum2_sqr += (InputSignal2.Samples[i] * InputSignal2.Samples[i]);
+
+                //calculate complex using phaseShift , amplitude
                 float A1 = x1.FrequenciesAmplitudes[i];
                 float PhaseShift1 = x1.FrequenciesPhaseShifts[i];
-                components1[i] = new Complex(A1 * Math.Cos(PhaseShift1), A1 * Math.Sin(PhaseShift1));
-                //  Console.WriteLine(i);
-                components1[i] = Complex.Conjugate(components1[i]);
+                Complex comp1 = new Complex(A1 * Math.Cos(PhaseShift1), A1 * Math.Sin(PhaseShift1));
+                comp1 = Complex.Conjugate(comp1);
+
                 float A2 = x2.FrequenciesAmplitudes[i];
                 float PhaseShift2 = x2.FrequenciesPhaseShifts[i];
-                components2[i] = new Complex(A2 * Math.Cos(PhaseShift2), (A2 * Math.Sin(PhaseShift2)));
-                
+                Complex comp2 = new Complex(A2 * Math.Cos(PhaseShift2), (A2 * Math.Sin(PhaseShift2)));
 
-            }
-            output1.FrequenciesAmplitudes = new List<float>();
-            output1.FrequenciesPhaseShifts = new List<float>();
-            for (int j=0; j< n;j++)
-            {
-                sum1_sqr += (InputSignal1.Samples[j] * InputSignal1.Samples[j]);
-                sum2_sqr += (InputSignal2.Samples[j] * InputSignal2.Samples[j]);
 
-                Complex c = components1[j] * components2[j];
+
+                // calculate complex multiply and save phase &magnitude to send it to idft
+                Complex c = comp1 * comp2;
                 output1.FrequenciesPhaseShifts.Add((float)c.Phase);
                 output1.FrequenciesAmplitudes.Add((float)c.Magnitude);
-                
             }
+        
+          
             normalize = Math.Sqrt(sum1_sqr * sum2_sqr) / n;
-            idft.InputFreqDomainSignal = output1;
+            idft.InputFreqDomainSignal = output1; //Get samples list from idft
             idft.Run();
 
             for (int i = 0; i < n; i++)
