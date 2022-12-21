@@ -18,6 +18,8 @@ namespace DSPAlgorithms.Algorithms
         /// </summary>
         public override void Run()
         {
+          
+            Signal output = new Signal(new List<float>(), false);
             int f_indx=10000;
             bool sample_indecies = false;
             if (InputSignal1.SamplesIndices.Count !=0)
@@ -30,7 +32,7 @@ namespace DSPAlgorithms.Algorithms
             {
                 OutputConvolvedSignal = new Signal(new List<float>(), false);
             }
-           
+            
             int n1= InputSignal1.Samples.Count,n2 = InputSignal2.Samples.Count;
             for(int i =0;i< (n1+n2) - 1;i++)
             {
@@ -42,13 +44,28 @@ namespace DSPAlgorithms.Algorithms
                         convolve += InputSignal1.Samples[j] * InputSignal2.Samples[i - j];
                     }
                 }
-                if (i == (n1 + n2) - 2 && convolve == 0)
-                    continue;
+
+                //if (i == (n1 + n2) - 2 && convolve == 0)
+                //{
+                //    continue;
+                //}
+
                 OutputConvolvedSignal.Samples.Add(convolve);
-                if(sample_indecies)
-                {
+                
+                if (sample_indecies)
                     OutputConvolvedSignal.SamplesIndices.Add(f_indx + i);
+                
+            }
+
+            for (int i = OutputConvolvedSignal.Samples.Count - 1; i >= 0; i--)
+            {
+                if (OutputConvolvedSignal.Samples[i] == 0)
+                {
+                    OutputConvolvedSignal.Samples.RemoveAt(i);
+                    OutputConvolvedSignal.SamplesIndices.RemoveAt( i);
                 }
+                else
+                    break;
             }
         }
     }

@@ -22,6 +22,9 @@ namespace DSPAlgorithms.Algorithms
 
         public override void Run()
         {
+
+            float delta_F = InputTransitionBand / InputFS;
+
             //first Know which window we will use & calculate N
             string window_name = "";
             int N = 0;
@@ -30,7 +33,6 @@ namespace DSPAlgorithms.Algorithms
             {
                 window_name = "rectangular";
                 N = (int)Math.Ceiling(0.9f / (InputTransitionBand/ InputFS));
-
             }
             else if (InputStopBandAttenuation <= 44)
             {
@@ -47,12 +49,16 @@ namespace DSPAlgorithms.Algorithms
                 window_name = "blackman";
                 N = (int)Math.Ceiling(5.5f / (InputTransitionBand / InputFS));
             }
-            Console.WriteLine(N);
+
+
             if (N % 2 == 0)
                 N += 1;    //round to nearest odd num
-          ////////////////////////////////////////////////////////////////////////
+          
+            ////////////////////////////////////////////////////////////////////////
             //calculate ideal impulse filter
+
             List<float?> hn = new List<float?>();
+
             if(InputFilterType == FILTER_TYPES.LOW)
             {
                 //get fc dash & normalized it
@@ -63,7 +69,6 @@ namespace DSPAlgorithms.Algorithms
                     if(i == 0)
                     {
                         hn.Add((InputCutOffFrequency * 2));
-                        
                     }
                     else
                     {
@@ -76,14 +81,13 @@ namespace DSPAlgorithms.Algorithms
             else if(InputFilterType == FILTER_TYPES.HIGH)
             {
                 //get fc dash & normalized it
-                InputCutOffFrequency = InputCutOffFrequency + (InputTransitionBand / 2);
+                InputCutOffFrequency = InputCutOffFrequency - (InputTransitionBand / 2);
                 InputCutOffFrequency /= InputFS;
                 for (int i = 0; i <= N / 2; i++)
                 {
                     if (i == 0)
                     {
                         hn.Add((1 - (InputCutOffFrequency * 2)));
-                        Console.WriteLine(hn[0]);
                     }
                     else
                     {
@@ -93,15 +97,73 @@ namespace DSPAlgorithms.Algorithms
                 }
             }
             else if(InputFilterType == FILTER_TYPES.BAND_PASS)
-            { }
-            else { }
+            {
+                float  fc1_ = (float) (InputF1 - InputTransitionBand / 2) / InputFS;
+                float  fc2_ = (float) (InputF2 + InputTransitionBand / 2) / InputFS;
+      
+                for (int i=0; i<= N/2;i++)
+                {
+                    if (i == 0)
+                    {
+                        hn.Add((float)(2 * (fc2_ - fc1_)));
+                        continue;
+                    }
+
+                    float w1 = (float)( i *2 * Math.PI * fc1_);
+                    float w2 = (float)(i * 2 * Math.PI * fc2_);
+
+
+                    float bp = (float)((2 * fc2_ * Math.Sin(w2) / w2) - (2 * fc1_ * Math.Sin(w1) / w1));
+                    hn.Add(bp);
+                }
+            }
+            else
+            {
+                float fc1_ = (float)((InputF1 + InputTransitionBand / 2) / InputFS);
+                float fc2_ = (float)((InputF2 - InputTransitionBand / 2) / InputFS);
+
+                for (int i = 0; i <= N / 2; i++)
+                {
+                    if (i == 0)
+                    {
+                        hn.Add((float)(1 - 2 * (fc2_ - fc1_)));
+                        continue;
+                    }
+
+                    float w1 = (float)(i * 2 * Math.PI * fc1_);
+                    float w2 = (float)(i * 2 * Math.PI * fc2_);
+
+                    float bs = (float)((2 * fc1_ * Math.Sin(w1) / w1) - (2 * fc2_ * Math.Sin(w2) / w2));
+                    hn.Add(bs);
+                }
+            }
 
             //////////////////////////////////////////////////////////////////////////////////////////
             //calculate window function
+
             OutputHn = new Signal(new List<float>(), false);
-            float[] samples = new float[N ];
-            int[] indecies = new int[N ];
-            if(window_name== "hammen")
+            float[] samples = new float[N];
+            int[] indecies = new int[N];
+
+            if (window_name == "hannen")
+            {
+                int j = 0;
+                for (int i = N / 2; i < N; i++)
+                {
+                    float ceta = (float)(2 * Math.PI * j) / N;
+                    float wn = (float)(0.5 + (0.5 * Math.Cos(ceta)));
+                    samples[i] = (float)hn[j] * wn;
+                    indecies[i] = j;
+                    if (j >= 1)
+                    {
+                        samples[N / 2 - j] = (float)hn[j] * wn;
+                        indecies[N / 2 - j] = -j;
+                    }
+                    j++;
+                }
+            }
+
+            else if (window_name== "hammen")
             {
                 int j = 0;
                 for(int i=N/2;i<N;i++)
@@ -115,12 +177,8 @@ namespace DSPAlgorithms.Algorithms
                         samples[N/2 - j] = (float)hn[j] * wn;
                         indecies[N/2 - j] = -j;
                     }
-                    
                     j++;
-
-
                 }
-
             }
            
             else if(window_name == "blackman")
@@ -142,22 +200,22 @@ namespace DSPAlgorithms.Algorithms
 
                     j++;
 
-
                 }
             }
-            for(int i=0;i<N;i++)
-            {
-                Console.WriteLine(indecies[i]+"  "+samples[i]);
-            }
-           
+
+
             OutputHn.Samples = samples.ToList();
             OutputHn.SamplesIndices = indecies.ToList();
+
             DirectConvolution dc = new DirectConvolution();
+
             dc.InputSignal1 = OutputHn;
             dc.InputSignal2 = InputTimeDomainSignal;
+            dc.InputSignal2.SamplesIndices = InputTimeDomainSignal.SamplesIndices;
+            
             dc.Run();
             OutputYn = dc.OutputConvolvedSignal;
-
+         
         }
     }
 }
