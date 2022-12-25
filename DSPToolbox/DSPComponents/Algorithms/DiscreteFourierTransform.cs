@@ -22,15 +22,15 @@ namespace DSPAlgorithms.Algorithms
             List<float> Amplitudes = new List<float>();
             List<float> PhaseShifts = new List<float>();
             List<float> Frequencies = new List<float>();
-            float ts = (1 / InputSamplingFrequency);
+            double ts = (1 / InputSamplingFrequency);
             double omega = (2 * Math.PI) /( sz * ts);
             
             for (int k=0 ; k < sz ; k++)
             {
                 Complex sum = new Complex();
                 for (int n = 0 ; n<sz ; n++)
-                {                
-                    float ceta = ( k * n * 2 * (float)Math.PI) / sz;
+                {
+                    double ceta = ( k * n * 2 * Math.PI) / sz;
                     if (ceta == 0)
                         sum += InputTimeDomainSignal.Samples[n];
                     else

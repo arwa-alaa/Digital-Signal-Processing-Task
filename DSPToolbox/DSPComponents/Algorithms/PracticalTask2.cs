@@ -89,7 +89,11 @@ namespace DSPAlgorithms.Algorithms
         }
         public void SaveSignal(Signal res,string file_name,string type)
         {
-            string full_path = "C:/Users/Home/Documents/Digital-Single-Processing-Task/DSPToolbox/DSPComponentsUnitTest/TestingSignals/";
+            string hoda_path = "C:/Users/Home/Documents/Digital-Single-Processing-Task/DSPToolbox/DSPComponentsUnitTest/TestingSignals/";
+            string arwa_path = "E:/7th Term/Digital Single Processing/Task/saved files/";
+
+            string full_path = arwa_path;
+
             full_path += file_name;
             using(StreamWriter writer = new StreamWriter(full_path))
             {
