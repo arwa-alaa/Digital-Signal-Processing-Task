@@ -16,7 +16,7 @@ namespace DSPComponentsUnitTest
         public void PracticalTask2TestCaseECG()
         {
             PracticalTask2 T2_Obj = new PracticalTask2();
-            T2_Obj.SignalPath = "TestingSignals/ecg400.ds";
+            T2_Obj.SignalPath = "C:/Users/Home/Documents/Digital-Single-Processing-Task/DSPToolbox/DSPComponentsUnitTest/TestingSignals/ecg400.ds";
             T2_Obj.miniF = 150;
             T2_Obj.maxF = 250;
             T2_Obj.Fs = 1000;
@@ -26,12 +26,12 @@ namespace DSPComponentsUnitTest
 
             var signal = UnitTestUtitlities.LoadSignal(T2_Obj.SignalPath);
             T2_Obj.Run();
-            Signal Res=T2_Obj.OutputFreqDomainSignal;
+            Signal Res = T2_Obj.OutputFreqDomainSignal;
 
-            var expectedOutput = UnitTestUtitlities.LoadSignal("TestingSignals/FileDown.ds");
 
-            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Frequencies, Res.Frequencies)
-                 && UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.FrequenciesAmplitudes, Res.FrequenciesAmplitudes)
+            var expectedOutput = UnitTestUtitlities.LoadSignal("C:/Users/Home/Documents/Digital-Single-Processing-Task/DSPToolbox/DSPComponentsUnitTest/TestingSignals/FileDown.ds");
+
+            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.FrequenciesAmplitudes, Res.FrequenciesAmplitudes)
                 && UnitTestUtitlities.SignalsPhaseShiftsAreEqual(expectedOutput.FrequenciesPhaseShifts, Res.FrequenciesPhaseShifts));
         }
     }

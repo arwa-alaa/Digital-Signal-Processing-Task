@@ -21,11 +21,13 @@ namespace DSPAlgorithms.Algorithms
             }
             float mean = sum / InputSignal.Samples.Count;
             List<float> ans = new List<float>();
+            List<int> indecies = new List<int>();
             for (int i = 0; i < InputSignal.Samples.Count; i++)
             {
                 ans.Add(InputSignal.Samples[i] - mean);
+                indecies.Add(i);
             }
-            OutputSignal = new Signal(ans, false);
+            OutputSignal = new Signal(ans,indecies, false);
         }
     }
 }

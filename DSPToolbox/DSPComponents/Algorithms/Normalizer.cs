@@ -30,6 +30,7 @@ namespace DSPAlgorithms.Algorithms
             {
                 float norm_sample = (((InputSignal.Samples[i]- min)/(max - min)) * (InputMaxRange - InputMinRange) )+ InputMinRange;
                 OutputNormalizedSignal.Samples.Add(norm_sample);
+                OutputNormalizedSignal.SamplesIndices.Add(i);
 
             }
         }
